@@ -14,8 +14,8 @@
             <td>{{ $task->status }}</td>
         </tr>
         <tr>
-            <th>タイトル</th>
-            <td>{{ $task->title }}</td>
+            <th>タスク</th>
+            <td>{{ $task->content }}</td>
         </tr>
     </table>
     
