@@ -5,20 +5,21 @@
     <h1>id: {{ $task->id }} のタスク編集ページ</h1>
 
  <div class="row">
-        <div class="col-xs-12"></div>
-        <div class="col-sm-offset-2 col-sm-6"></div>
-        <div class="col-md-offset-2 col-sm-6"></div>
-        <div class="col-lg-offset-3 col-lg-3"></div>
+        <div class="col-xs-6">
 
     {!! Form::model($task, ['route' => ['tasks.update', $task->id], 'method' => 'put']) !!}
 
-        {!! Form::label('content', 'タスク:') !!}
+    <div class="form-group">
+        {!! Form::label('content', 'タイトル:') !!}
         {!! Form::text('title') !!}
+    </div>
         
+    <div class="form-group">
         {!! Form::label('content', 'メッセージ:') !!}
         {!! Form::text('content') !!}
+    </div>
 
-        {!! Form::submit('更新') !!}
+        {!! Form::submit('更新', ['class' => 'btn btn-default']) !!}
 
     {!! Form::close() !!}<!-- ここにページ毎のコンテンツを書く -->
 
