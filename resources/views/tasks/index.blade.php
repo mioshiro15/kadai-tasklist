@@ -11,7 +11,6 @@
                     <th>id</th>
                     <th>タイトル</th>
                     <th>ステータス</th>
-                    <th>メッセージ</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,10 +18,9 @@
        
             @foreach ($tasks as $task)
                 <tr>
-                    <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!} : {{ $task->status }} >{{ $task->title }} > {{ $task->content }}</li>
+                    <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}  </li>
                     <td>{{ $task->status }}</td>
                     <td>{{ $task->title }}</td>
-                    <td>{{ $task->content }}</td>
                 </tr>
             @endforeach    
   
