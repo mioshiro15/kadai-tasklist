@@ -18,7 +18,8 @@
        
             @foreach ($tasks as $task)
                 <tr>
-                    <td>{!! link_to_route('tasks.show', $task->id, ['id' => $task->id]) !!}</td>
+                    <td>{!! link_to_route('tasks.show', $task->id, ['id' => $message->id]) !!} : {{ $task->status }} >{{ $task->title }} > {{ $task->content }}</li>
+                    <td>{{ $task->status }}</td>
                     <td>{{ $task->title }}</td>
                     <td>{{ $task->content }}</td>
                 </tr>
